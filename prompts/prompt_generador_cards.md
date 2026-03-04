@@ -22,7 +22,10 @@ Restricciones:
 - SQL compatible con PostgreSQL
 - Evitar SELECT *
 - Usar campos transformados (conv_*) cuando existan
-- Incluir filtro de fechas con variables de Metabase: {{fecha_inicio}} y {{fecha_fin}}
+- Incluir filtro de fechas en formato opcional de Metabase:
+  WHERE 1=1
+  [[AND {{fecha_inicio}}]]
+  [[AND {{fecha_fin}}]]
 - No inventar columnas
 
 Devuelve exactamente:

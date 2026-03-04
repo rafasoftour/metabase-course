@@ -20,7 +20,9 @@ SELECT
   linea,
   COUNT(*) AS total_registros
 FROM dw_sae.expediciones
-WHERE fecha_iso BETWEEN {{fecha_inicio}} AND {{fecha_fin}}
+WHERE 1=1
+[[AND {{fecha_inicio}}]]
+[[AND {{fecha_fin}}]]
 GROUP BY 1, 2
 ORDER BY 1, 2;
 ```

@@ -14,7 +14,9 @@ SELECT
   COUNT(*) AS total_expediciones,
   COUNT(DISTINCT e.fecha_iso) AS dias_con_servicio
 FROM dw_sae.expediciones e
-WHERE e.fecha_iso BETWEEN {{fecha_inicio}} AND {{fecha_fin}}
+WHERE 1=1
+[[AND {{fecha_inicio}}]]
+[[AND {{fecha_fin}}]]
 GROUP BY e.linea
 ORDER BY total_expediciones DESC;
 ```
